@@ -1,0 +1,15 @@
+<?php
+
+$freedom_authtype = 'yubico';
+
+$freedom_authtypeparams['yubico'] = array(
+    'auth' => array(
+        'app' => 'YUSER',
+        'action' => 'YLOGINFORM',
+        'args' => ''
+    ),
+    'username' => 'auth_user',
+    'password' => 'auth_pass',
+    'yubico_api_id' => '<<< insert your Yubico API id here >>>',
+    'yubico_api_key' => '<<< insert your Yubico API key here >>>'
+);
