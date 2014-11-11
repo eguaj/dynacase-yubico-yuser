@@ -26,9 +26,9 @@ class yubicoAuthenticator extends htmlAuthenticator
 
     public function checkYubicoOTP($otp)
     {
-        $yubi = new Auth_Yubico($this->parms['yubico_api_id'], $this->parms['yubico_api_key']);
+        $yubi = new \Auth_Yubico($this->parms['yubico_api_id'], $this->parms['yubico_api_key']);
         $auth = $yubi->verify($otp);
-        if (!PEAR::isError($auth)) {
+        if (!\PEAR::isError($auth)) {
             return true;
         }
         error_log(__METHOD__ . " " . sprintf("OTP verification failure: '%s' ('%s')", $auth->getMessage(), $yubi->getLastResponse()));

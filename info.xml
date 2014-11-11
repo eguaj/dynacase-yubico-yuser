@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module name="dynacase-yubico-user" version="0.0.0" release="1">
     <pre-install>
-        <check type="phpclass" name="PEAR" include="PEAR.php" />
+        <check type="phpclass" class="PEAR" include="PEAR.php" />
     </pre-install>
     <post-install>
         <process command="programs/record_application YUSER I" />
         <process command="wsh.php --api=importDocuments --file=YUSER/YUSER.csv" />
     </post-install>
     <pre-upgrade>
-        <check type="phpclass" name="PEAR" include="PEAR.php" />
+        <check type="phpclass" class="PEAR" include="PEAR.php" />
     </pre-upgrade>
     <post-upgrade>
         <process command="programs/record_application YUSER U" />

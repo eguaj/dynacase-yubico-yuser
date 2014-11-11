@@ -4,6 +4,6 @@ CLASS;YUBICO\User;;;;;;;;;;;;;
 //;;;;;;;;;;;;;;
 ATTR;YUBICO_SETTINGS;;Yubico settings;N;N;frame;;W;;;;;;
 ATTR;YUBICO_ENABLED;YUBICO_SETTINGS;Enable Yubico authentication;N;N;enum;20000;W;;;;N|No,Y|Yes;;
-ATTR;YUBICO_USERID;YUBICO_SETTINGS;Yubico OTP (use your Yubico key to insert a OTP here);N;N;text;20010;W;;;;::extractUserIdFromOTP(YUBICO_USERID);;::isValidOTP(YUBICO_USERID)
+ATTR;YUBICO_USERID;YUBICO_SETTINGS;Yubico OTP (use your Yubico key to insert a OTP here);N;N;text;20010;W;;;;::extractUserIdFromOTP(YUBICO_USERID);;::isValidOTP(YUBICO_USERID,YUBICO_ENABLED)
 //;;;;;;;;;;;;;;
 END;;;;;;;;;;;;;;
